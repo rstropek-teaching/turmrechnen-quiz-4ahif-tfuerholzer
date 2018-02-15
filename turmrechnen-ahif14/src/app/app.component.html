@@ -1,0 +1,13 @@
+<h3>Turmrechnen</h3>
+<div>Startwert : </div><input type="number" [(ngModel)]="startingValue">
+<div>Höhe : </div><input type="number" [(ngModel)]="heightValue">
+<br>
+<br>
+<button (click)="calculate();" [disabled]="heightValue<2">Turm berechnen</button>
+<br>
+<div style="color: red" *ngIf="heightValue<2">Die Höhe muss >= 2 sein!</div>
+<br>
+  <div *ngFor="let res of results">
+    <div>{{res}}</div>
+  </div>
+
